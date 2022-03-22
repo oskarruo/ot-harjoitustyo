@@ -1,0 +1,105 @@
+commit 0c4b8ff684aeda1b731e695c31e2b44f11bf8966
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 22:01:36 2022 +0200
+
+    uudelleennimeys ja poisto
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7e0ec61c2dc56cfd303f7a6abdfbdce086eefb5f
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:58:25 2022 +0200
+
+    lisätty tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1127856b3d9d4fe587b39d2459b2ca54c09f3bf1
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:54:16 2022 +0200
+
+    muutettu ekaa ja kolmatta
+
+ eka.txt    | 11 ++++++++++-
+ kolmas.txt |  2 +-
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+commit 75087507e17e9b233a14332c3274cd5ee7dcd2e1
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:48:39 2022 +0200
+
+    poistettu toinen ja uudelleennimetty eka
+
+ tiedosto.txt => eka.txt | 0
+ toinen.txt              | 1 -
+ 2 files changed, 1 deletion(-)
+
+commit e3d7aa637eaf1668fd023f90d44ea583f69371ee
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:44:24 2022 +0200
+
+    muutettu 1:stä
+
+ tiedosto.txt | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+
+commit 253796b1a031f326d426dae12503cab9c2e42f83
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:41:18 2022 +0200
+
+    lisätty tekstiä 1:seen
+
+ tiedosto.txt | 4563 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 4563 insertions(+)
+
+commit de68b2e66789eefba7e5adada32a096679beb8b5
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:36:45 2022 +0200
+
+    lisätty stuff
+
+ stuff/aaa.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 52d4145730ea068fb82a133e1c77419a7a644936
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:35:40 2022 +0200
+
+    muutettu toista ja kolmatta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ebef8394df77fea4c06224d1ce942d3c80a0d25e
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:34:26 2022 +0200
+
+    lisätty kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8ab1a7e121ce528afe61d602ba425a847c13fdef
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:32:04 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 9b3f31fb4ca54cd92aa8079d8eb2675f0eed3c7b
+Author: oskarruo <oskar.ruokolainen@gmail.com>
+Date:   Tue Mar 22 21:29:49 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
