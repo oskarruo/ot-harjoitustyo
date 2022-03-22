@@ -1,7 +1,9 @@
-# Otsikko
+# Ohjelmistotekniikka, harjoitustyö
 
-Tässä on normaalia tekstiä
+## Tehtävät
 
-**Tässä on lihavoitua tekstiä**
+## Viikko 1
 
-*Tässä on kursivoitua tekstiä*
+[gitlog.txt](/laskarit/viikko1/gitlog.txt)
+
+[komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
