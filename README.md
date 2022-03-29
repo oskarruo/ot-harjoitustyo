@@ -14,4 +14,4 @@
 
 **Viikko 2**
 
-[screenshot.png](/laskarit/viikko2/screenshot.png)
+[Coverage screenshot](/laskarit/viikko2/coverage.png)
