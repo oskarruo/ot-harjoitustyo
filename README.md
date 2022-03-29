@@ -2,7 +2,7 @@
 
 [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpit](/dokumentaatio/tyoaikakirjanpito.md)
+[Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Tehtävät
 
