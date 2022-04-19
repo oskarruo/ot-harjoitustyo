@@ -34,7 +34,7 @@ sequenceDiagram
     Game ->>+ GameLoop: start gameloop
     GameLoop ->>+ Level: press k_left, k_right, k_down, k_up
     Level ->>+ PlayerCube: move_cube
-    PlaerCube -->>- Level: True
+    PlayerCube -->>- Level: True
     Level -->>- GameLoop: True 
     GameLoop -->>- Game: True
     Game -->>- User: 
