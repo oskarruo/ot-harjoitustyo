@@ -11,7 +11,7 @@ Luokkakaavio sovelluksen tärkeimmistä luokista. GameLoop-luokka pyörittää p
       Level "1" --> "1" PlayerCube
       class Game{
       }
-      class Gameloop{
+      class GameLoop{
       }
       class Level{
       }
