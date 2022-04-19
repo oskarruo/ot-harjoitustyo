@@ -1,17 +1,11 @@
-# Ohjelmistotekniikka, harjoitustyö
+# World's Hardest Game
+
+Tasohyppelypeli jossa pelaajan tulee liikuttaa kuutio maaliin väistellen esteitä ja keräten esineitä.
+
+## Dokumentaatio
 
 [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
 
-## Tehtävät
-
-**Viikko 1**
-
-[gitlog.txt](/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
-
-**Viikko 2**
-
-[Coverage screenshot](/laskarit/viikko2/coverage.png)
+[Changelog](/dokumentaatio/changelog.md)

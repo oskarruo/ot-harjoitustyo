@@ -1,7 +1,7 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Sovellus on peli, joka perustuu toiminnaltaan "The impossible game" -tasohyppelypeliin.
+Sovellus on peli, joka perustuu toiminnaltaan "**World's Hardest Game**" -tasohyppelypeliin.
 
 ## Perusversion toiminnallisuudet
 - Pelaaja voi valita haluamansa tason valikosta
