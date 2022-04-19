@@ -6,6 +6,38 @@ Tasohyppelypeli jossa pelaajan tulee liikuttaa kuutio maaliin väistellen esteit
 
 [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
+[Arkkitehtuurikuvaus](/dokumentaatio/arkkitehtuuri.md)
 
 [Changelog](/dokumentaatio/changelog.md)
+
+[Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
+
+## Ohjeet asennukseen
+
+1. Asenna riippvuudet komennolla:
+```bash
+poetry install
+```
+2. Käynnistä sovellus komennolla:
+```bash
+poetry run invoke start
+```
+
+## Ohjeet komentorivitoimintoihin
+
+1. Ohjelman voi suorittaa komennolla:
+```bash
+poetry run invoke start
+```
+2. Testit voi suorittaa komennolla:
+```bash
+poetry run invoke test
+```
+3. Testikattavuusraportin voi generoida komennolla:
+```bash
+poetry run invoke coverage-report
+```
+4. Pylint-tarkastukset voi suorittaa komennolla
+```bash
+poetry run invoke lint
+```
