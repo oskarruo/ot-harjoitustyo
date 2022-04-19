@@ -37,5 +37,5 @@ sequenceDiagram
     PlaerCube -->>- Level: True
     Level -->>- GameLoop: True 
     GameLoop -->>- Game: True
-    Game -->>- User:
+    Game -->>- User: 
 ```
