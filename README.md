@@ -2,6 +2,8 @@
 
 Tasohyppelypeli jossa pelaajan tulee liikuttaa kuutio maaliin väistellen esteitä ja keräten esineitä.
 
+[Viikko 5 release](/Releases/viikko5)
+
 ## Dokumentaatio
 
 [Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
