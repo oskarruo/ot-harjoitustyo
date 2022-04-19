@@ -38,4 +38,4 @@ sequenceDiagram
     Level -->>- GameLoop: True 
     GameLoop -->>- Game: True
     Game -->>- User:
-    
+```
