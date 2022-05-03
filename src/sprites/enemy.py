@@ -1,13 +1,13 @@
 import os
 import pygame
 
-dirname = os.path.dirname(__file__)
+DIR_NAME = os.path.dirname(__file__)
 
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x=0, y=0, speed_x=0, speed_y=0): # pylint: disable=invalid-name
         super().__init__()
 
-        self.image = pygame.image.load(os.path.join(dirname, "..", "assets", "redball.png"))
+        self.image = pygame.image.load(os.path.join(DIR_NAME, "..", "assets", "redball.png"))
 
         self.rect = self.image.get_rect()
 

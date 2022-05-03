@@ -6,7 +6,7 @@ from sprites.goal import Goal
 from sprites.pickup import Pickup
 from sprites.enemy import Enemy
 
-class Level:
+class Level: # pylint: disable=too-many-instance-attributes
     def __init__(self, level_map, cell_size, pickup_amount):
         self.cell_size = cell_size
         self.cube = pygame.sprite.Sprite
@@ -19,10 +19,10 @@ class Level:
         self.pickup_amount = pickup_amount
         self.pickups_collected = 0
 
-        self.init_sprites(level_map)
+        self._init_sprites(level_map)
 
-    def init_sprites(self, level_map):
-        height =  len(level_map)
+    def _init_sprites(self, level_map): # pylint: disable=too-many-statements
+        height = len(level_map)
         width = len(level_map[0])
 
         for y in range(height): # pylint: disable=invalid-name
@@ -56,36 +56,36 @@ class Level:
         self.all_sprites.add(self.floors, self.walls, self.goaltiles, self.pickups, self.cube, self.enemies)
 
     def move_cube(self, dx=0, dy=0): # pylint: disable=invalid-name
-        if self.pickup_collect():
+        if self._pickup_collect():
             self.pickups_collected += 1
-        if self.goal_reached() and self.finish_allowed():
+        if self._goal_reached() and self._finish_allowed():
             return True
-        if not self.move_allowed(dx, dy):
+        if not self._move_allowed(dx, dy):
             self.cube.rect.move_ip(dx, dy)
 
-    def move_allowed(self, dx=0, dy=0): # pylint: disable=invalid-name
+    def _move_allowed(self, dx=0, dy=0): # pylint: disable=invalid-name
         self.cube.rect.move_ip(dx, dy)
         collision = pygame.sprite.spritecollide(self.cube, self.walls, False)
         self.cube.rect.move_ip(-dx, -dy)
         return collision
 
-    def goal_reached(self):
+    def _goal_reached(self):
         return pygame.sprite.spritecollide(self.cube, self.goaltiles, False)
 
-    def pickup_collect(self):
+    def _pickup_collect(self):
         return pygame.sprite.spritecollide(self.cube, self.pickups, True)
 
-    def finish_allowed(self):
+    def _finish_allowed(self):
         if self.pickups_collected >= self.pickup_amount:
             return True
         return False
 
     def update_enemies(self):
         for enemy in self.enemies:
-            self.enemy_change_dir(enemy)
+            self._enemy_change_dir(enemy)
             enemy.rect.move_ip(enemy.speed_x, enemy.speed_y)
 
-    def enemy_change_dir(self, enemy):
+    def _enemy_change_dir(self, enemy):
         if pygame.sprite.spritecollide(enemy, self.walls, False):
             enemy.speed_x = -enemy.speed_x
             enemy.speed_y = -enemy.speed_y

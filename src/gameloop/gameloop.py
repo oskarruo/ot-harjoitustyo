@@ -1,7 +1,6 @@
-import sys
 import pygame
 
-class GameLoop:
+class GameLoop: # pylint: disable=too-many-instance-attributes
     def __init__(self, level, renderer, eventqueue, clock, cell_size):
         self.level = level
         self.cell_size = cell_size
@@ -12,18 +11,20 @@ class GameLoop:
         self.move_left = False
         self.move_up = False
         self.move_down = False
+        self.loop = True
+        self.quit = False
 
     def start(self):
-        while True:
-            if self.eventhandler():
-                return True
+        while self.loop:
             self.level.update_enemies()
             if self.level.check_enemy_collisions():
                 return False
             self.render()
+            if self.eventhandler():
+                return True
             self.clock.tick(60)
 
-    def eventhandler(self):
+    def eventhandler(self): # pylint: disable=too-many-branches, too-many-statements
         for event in self.eventqueue.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
@@ -34,6 +35,10 @@ class GameLoop:
                     self.move_up = True
                 if event.key == pygame.K_DOWN:
                     self.move_down = True
+                if event.key == pygame.K_ESCAPE:
+                    self.loop = False
+                    self.quit = True
+                    pygame.quit()
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_RIGHT:
@@ -46,7 +51,9 @@ class GameLoop:
                     self.move_down = False
 
             if event.type == pygame.QUIT:
-                sys.exit()
+                self.loop = False
+                self.quit = True
+                pygame.quit()
 
         if self.move_right:
             if self.level.move_cube(dx=2):

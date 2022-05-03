@@ -1,11 +1,11 @@
 import json
 import os
 
-dirname = os.path.dirname(__file__)
+DIR_NAME = os.path.dirname(__file__)
 
 class Stagehandler:
     def __init__(self):
-        with open(os.path.join(dirname, "assets", "stages.json")) as file:
+        with open(os.path.join(DIR_NAME, "stages", "stages.json")) as file:
             data = file.read()
         self.stages = json.loads(data)
         self.current_stage = 0
