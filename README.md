@@ -2,7 +2,7 @@
 
 Tasohyppelypeli jossa pelaajan tulee liikuttaa kuutio maaliin väistellen esteitä ja keräten esineitä.
 
-[Viikko 5 release](https://github.com/oskarruo/ot-harjoitustyo/releases/tag/viikko5)
+[Viikko 5 release](https://github.com/oskarruo/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Dokumentaatio
 
