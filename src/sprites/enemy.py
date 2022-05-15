@@ -16,3 +16,14 @@ class Enemy(pygame.sprite.Sprite):
 
         self.speed_x = speed_x
         self.speed_y = speed_y
+
+class RectEnemy(Enemy):
+    def __init__(self, width, height, speed, x=0, y=0):
+        super().__init__(x, y)
+        self.width = width * 30
+        self.height = height * 30
+        self.speed = speed
+        self.lateral = False
+
+        self.height_moved = 0
+        self.width_moved = 0
