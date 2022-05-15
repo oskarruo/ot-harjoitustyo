@@ -14,6 +14,7 @@ class Game: # pylint: disable=too-many-instance-attributes
         level_map: Array that contains the map of the level
         cellsize: Integer that tells how wide (in px) a single square on the map is
         pickup_amount: Integer that tells how many pickups are to be collected in a stage
+        enemy_info: Dictionary telling propetries of enemies in the stage
         height: Integer that tells the height of the stage in squares
         width: Integer that tells the width of the stage in squares
         display_height: Integer that tells the height of the window in pixels
@@ -32,6 +33,7 @@ class Game: # pylint: disable=too-many-instance-attributes
         self.level_map = self.stagehandler.get_stagemap()
         self.cellsize = self.stagehandler.get_stage_cellsize()
         self.pickup_amount = self.stagehandler.get_stage_pickup_amount()
+        self.enemy_info = self.stagehandler.get_stage_enemy_info()
         self.height = len(self.level_map)
         self.width = len(self.level_map[0])
         self.display_height = self.height * self.cellsize
@@ -40,7 +42,7 @@ class Game: # pylint: disable=too-many-instance-attributes
 
         pygame.display.set_caption("World's Hardest Game")
 
-        level = Level(self.level_map, self.cellsize, self.pickup_amount)
+        level = Level(self.level_map, self.cellsize, self.pickup_amount, self.enemy_info)
         eventqueue = EventQueue()
         clock = Clock()
         renderer = Renderer(self.display, level)
@@ -49,7 +51,7 @@ class Game: # pylint: disable=too-many-instance-attributes
         pygame.init()
 
         if gameloop.start() is False:
-            self.__init__(stage, self.single_stage)
+            self.__init__(stage, True)
 
         if self.single_stage or gameloop.quit:
             pygame.quit()

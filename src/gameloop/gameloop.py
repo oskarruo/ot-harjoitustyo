@@ -1,7 +1,29 @@
 import pygame
 
 class GameLoop: # pylint: disable=too-many-instance-attributes
+    """Class for the loop which runs the game
+    Attributes:
+        level: a level object with the information of the stage
+        cell_size: width of a square in the level
+        renderer: updates the display
+        eventqueue: list of events happened
+        clock: keeps the game running at 60 frames per second
+        move_right: bool if the cube move right
+        move_left: bool if the cube should move left
+        move_up: bool if the cube should move up
+        move_down: bool if the cube should move down
+        loop: bool if the gameloop should run
+        quit: bool if game should exit
+    """
     def __init__(self, level, renderer, eventqueue, clock, cell_size):
+        """Constructor for the class
+        Args:
+            level: level object
+            renderer: renderer object
+            eventqueue: eventqueue object
+            clock: clock object
+            cell_size: width of a square in the level
+        """
         self.level = level
         self.cell_size = cell_size
         self.renderer = renderer
@@ -16,15 +38,17 @@ class GameLoop: # pylint: disable=too-many-instance-attributes
 
     def start(self):
         while self.loop:
+            if self.level.is_finished():
+                return True
             self.level.update_enemies()
+            self.level.pickup_collect()
             if self.level.check_enemy_collisions():
                 return False
-            self.render()
-            if self.eventhandler():
-                return True
+            self._render()
+            self._eventhandler()
             self.clock.tick(60)
 
-    def eventhandler(self): # pylint: disable=too-many-branches, too-many-statements
+    def _eventhandler(self): # pylint: disable=too-many-branches, too-many-statements
         for event in self.eventqueue.get():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
@@ -68,5 +92,5 @@ class GameLoop: # pylint: disable=too-many-instance-attributes
             if self.level.move_cube(dy=2):
                 return True
 
-    def render(self):
+    def _render(self):
         self.renderer.render()
