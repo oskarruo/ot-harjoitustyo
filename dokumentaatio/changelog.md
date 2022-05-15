@@ -14,3 +14,7 @@
 ## Viikko 6
 - Lisätty käyttöliittymä
 - Pelaaja voi aloittaa koko pelin alusta ja pelata tasojen läpi järjestyksessä tai pelata yksittäisen tason
+
+## Viikko 7
+- Lisätty tasoja
+- Lisätty uusi vihollistyyppi
