@@ -104,7 +104,11 @@ class Level: # pylint: disable=too-many-instance-attributes
         if pygame.sprite.spritecollide(self.cube, self.pickups, True):
             self.pickups_collected += 1
 
-    def _finish_allowed(self):
+    def finish_allowed(self):
+        """Checks if the player has collected enough pickups to complete the level
+        Returns:
+            True, if enough pickups, else False
+        """
         if self.pickups_collected >= self.pickup_amount:
             return True
         return False
