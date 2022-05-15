@@ -6,9 +6,12 @@ Luokkakaavio sovelluksen tärkeimmistä luokista. GameLoop-luokka pyörittää p
 
 ```mermaid
  classDiagram
+      UI "1" --> "1" Game
       Game "1" --> "1" GameLoop
       GameLoop "1" --> "1" Level
       Level "1" --> "1" PlayerCube
+      class UI{
+      }
       class Game{
       }
       class GameLoop{
@@ -25,17 +28,20 @@ GameLoop-luokka rekisteröi pelaajan syötteen, Level-luokka siirtää pelaajan 
 ```mermaid
 sequenceDiagram
     actor User
+    participant UI
     participant Game
     participant GameLoop
     participant Level
     participant PlayerCube
     
-    User ->>+ Game: start game
+    User ->>+ UI: start application
+    UI ->>+ Game: start game
     Game ->>+ GameLoop: start gameloop
     GameLoop ->>+ Level: press k_left, k_right, k_down, k_up
     Level ->>+ PlayerCube: move_cube
     PlayerCube -->>- Level: True
     Level -->>- GameLoop: True 
     GameLoop -->>- Game: True
-    Game -->>- User: 
+    Game -->>- UI:
+    UI -->>- User:
 ```
