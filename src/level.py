@@ -118,7 +118,7 @@ class Level: # pylint: disable=too-many-instance-attributes
         Returns:
             True, if winning conditions are met, else False
         """
-        if self._goal_reached() and self._finish_allowed():
+        if self._goal_reached() and self.finish_allowed():
             return True
         return False
 
