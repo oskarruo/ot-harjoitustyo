@@ -42,6 +42,6 @@ sequenceDiagram
     PlayerCube -->>- Level: True
     Level -->>- GameLoop: True 
     GameLoop -->>- Game: True
-    Game -->>- UI:
+    Game -->>- UI: exit game
     UI -->>- User:
 ```
