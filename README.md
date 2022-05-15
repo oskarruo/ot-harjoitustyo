@@ -14,6 +14,10 @@ Tasohyppelypeli jossa pelaajan tulee liikuttaa kuutio maaliin väistellen esteit
 
 [Työaikakirjanpito](/dokumentaatio/tyoaikakirjanpito.md)
 
+[Kayttöohje](/dokumentaatio/kayttoohje.md)
+
+[Testausdokumentti](dokumentaatio/testaus.md)
+
 ## Ohjeet asennukseen
 
 1. Asenna riippvuudet komennolla:
