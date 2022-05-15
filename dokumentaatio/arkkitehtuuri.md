@@ -43,5 +43,5 @@ sequenceDiagram
     Level -->>- GameLoop: True 
     GameLoop -->>- Game: True
     Game -->>- UI: exit game
-    UI -->>- User
+    UI -->>- User: 
 ```
