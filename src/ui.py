@@ -1,7 +1,7 @@
 import sys
 from tkinter import Tk
-from start_view import StartView
-from stage_view import StageView
+from ui_views.start_view import StartView
+from ui_views.stage_view import StageView
 from game import Game
 
 class UI:
@@ -36,6 +36,24 @@ class UI:
     def _stage_three_button(self):
         Game(2, True)
 
+    def _stage_four_button(self):
+        Game(3, True)
+
+    def _stage_five_button(self):
+        Game(4, True)
+
+    def _stage_six_button(self):
+        Game(5, True)
+
+    def _stage_seven_button(self):
+        Game(6, True)
+
+    def _stage_eight_button(self):
+        Game(7, True)
+
+    def _stage_nine_button(self):
+        Game(8, True)
+
     def _go_back_button(self):
         self._show_start_view()
 
@@ -59,7 +77,13 @@ class UI:
             self._go_back_button,
             self._stage_one_button,
             self._stage_two_button,
-            self._stage_three_button
+            self._stage_three_button,
+            self._stage_four_button,
+            self._stage_five_button,
+            self._stage_six_button,
+            self._stage_seven_button,
+            self._stage_eight_button,
+            self._stage_nine_button
         )
 
         self._current_view.pack()
